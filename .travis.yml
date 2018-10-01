@@ -13,8 +13,12 @@ cache:
     - npm ci
     - npm run cy:verify
 
+install:
+  - npm ci
+
 defaults: &defaults
   script:
+    - $(npm bin)/cypress run --record
     #   ## print all Travis environment variables for debugging
     - $(npm bin)/print-env TRAVIS
     - npm start -- --silent &
