@@ -62,4 +62,4 @@ cache:
 install:
   - npm ci
 script:
-  - $(npm bin)/cypress run --record
+  - $(npm bin)/cypress run --record --key abc-key-123
