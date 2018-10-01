@@ -20,12 +20,12 @@ defaults: &defaults
   script:
     - $(npm bin)/cypress run --record
     #   ## print all Travis environment variables for debugging
-    #- $(npm bin)/print-env TRAVIS
-    #- npm start -- --silent &
-    #- npm run cy:run -- --record --parallel --group $STAGE_NAME
+    - $(npm bin)/print-env TRAVIS
+    - npm start -- --silent &
+    - npm run cy:run -- --record --parallel --group $STAGE_NAME
     # after all tests finish running we need
     # to kill all background jobs (like "npm start &")
-    #- kill $(jobs -p) || true
+    - kill $(jobs -p) || true
 
 jobs:
   include:
