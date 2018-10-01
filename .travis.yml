@@ -53,13 +53,13 @@
 #         - STAGE_NAME=4x-electron
 #       <<: *defaults
 language: node_js
-  node_js:
-    - 10
-  cache:
-    directories:
-      - ~/.npm
-      - ~/.cache
-  install:
-    - npm ci
-  script:
-    - $(npm bin)/cypress run --record
+node_js:
+  - 10
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+install:
+  - npm ci
+script:
+  - $(npm bin)/cypress run --record
